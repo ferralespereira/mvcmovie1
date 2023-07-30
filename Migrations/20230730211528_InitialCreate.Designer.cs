@@ -11,7 +11,7 @@ using MvcMovie.Data;
 namespace MvcMovie1.Migrations
 {
     [DbContext(typeof(MvcMovieContext))]
-    [Migration("20230729205132_InitialCreate")]
+    [Migration("20230730211528_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -30,6 +30,9 @@ namespace MvcMovie1.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18, 2)");
+
+                    b.Property<string>("Rating")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("ReleaseDate")
